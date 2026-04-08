@@ -1,1 +1,271 @@
+[
+  /* ===================== */
+  /*       MAJOR ARCANA    */
+  /* ===================== */
+  {
+    "id": "fool",
+    "name": "The Fool",
+    "arcana": "major",
+    "suit": null,
+    "number": 0,
+    "keywords": ["beginnings", "innocence", "potential"],
+    "image": "/assets/images/cards/major/fool.jpg"
+  },
+  {
+    "id": "magus",
+    "name": "The Magus",
+    "arcana": "major",
+    "suit": null,
+    "number": 1,
+    "keywords": ["will", "creation", "skill"],
+    "image": "/assets/images/cards/major/magus.jpg"
+  },
+  {
+    "id": "priestess",
+    "name": "The Priestess",
+    "arcana": "major",
+    "suit": null,
+    "number": 2,
+    "keywords": ["intuition", "mystery", "inner knowledge"],
+    "image": "/assets/images/cards/major/priestess.jpg"
+  },
+  {
+    "id": "empress",
+    "name": "The Empress",
+    "arcana": "major",
+    "suit": null,
+    "number": 3,
+    "keywords": ["fertility", "nature", "abundance"],
+    "image": "/assets/images/cards/major/empress.jpg"
+  },
+  {
+    "id": "emperor",
+    "name": "The Emperor",
+    "arcana": "major",
+    "suit": null,
+    "number": 4,
+    "keywords": ["authority", "structure", "control"],
+    "image": "/assets/images/cards/major/emperor.jpg"
+  },
+  {
+    "id": "hierophant",
+    "name": "The Hierophant",
+    "arcana": "major",
+    "suit": null,
+    "number": 5,
+    "keywords": ["tradition", "beliefs", "guidance"],
+    "image": "/assets/images/cards/major/hierophant.jpg"
+  },
+  {
+    "id": "lovers",
+    "name": "The Lovers",
+    "arcana": "major",
+    "suit": null,
+    "number": 6,
+    "keywords": ["union", "choice", "love"],
+    "image": "/assets/images/cards/major/lovers.jpg"
+  },
+  {
+    "id": "chariot",
+    "name": "The Chariot",
+    "arcana": "major",
+    "suit": null,
+    "number": 7,
+    "keywords": ["victory", "willpower", "movement"],
+    "image": "/assets/images/cards/major/chariot.jpg"
+  },
+  {
+    "id": "adjustment",
+    "name": "Adjustment",
+    "arcana": "major",
+    "suit": null,
+    "number": 8,
+    "keywords": ["balance", "truth", "justice"],
+    "image": "/assets/images/cards/major/adjustment.jpg"
+  },
+  {
+    "id": "hermit",
+    "name": "The Hermit",
+    "arcana": "major",
+    "suit": null,
+    "number": 9,
+    "keywords": ["solitude", "wisdom", "search"],
+    "image": "/assets/images/cards/major/hermit.jpg"
+  },
+  {
+    "id": "fortune",
+    "name": "Fortune",
+    "arcana": "major",
+    "suit": null,
+    "number": 10,
+    "keywords": ["cycles", "change", "destiny"],
+    "image": "/assets/images/cards/major/fortune.jpg"
+  },
+  {
+    "id": "lust",
+    "name": "Lust",
+    "arcana": "major",
+    "suit": null,
+    "number": 11,
+    "keywords": ["passion", "strength", "desire"],
+    "image": "/assets/images/cards/major/lust.jpg"
+  },
+  {
+    "id": "hanged_man",
+    "name": "The Hanged Man",
+    "arcana": "major",
+    "suit": null,
+    "number": 12,
+    "keywords": ["sacrifice", "perspective", "letting go"],
+    "image": "/assets/images/cards/major/hanged_man.jpg"
+  },
+  {
+    "id": "death",
+    "name": "Death",
+    "arcana": "major",
+    "suit": null,
+    "number": 13,
+    "keywords": ["transformation", "endings", "rebirth"],
+    "image": "/assets/images/cards/major/death.jpg"
+  },
+  {
+    "id": "art",
+    "name": "Art",
+    "arcana": "major",
+    "suit": null,
+    "number": 14,
+    "keywords": ["alchemy", "balance", "integration"],
+    "image": "/assets/images/cards/major/art.jpg"
+  },
+  {
+    "id": "devil",
+    "name": "The Devil",
+    "arcana": "major",
+    "suit": null,
+    "number": 15,
+    "keywords": ["bondage", "materialism", "shadow"],
+    "image": "/assets/images/cards/major/devil.jpg"
+  },
+  {
+    "id": "tower",
+    "name": "The Tower",
+    "arcana": "major",
+    "suit": null,
+    "number": 16,
+    "keywords": ["collapse", "revelation", "sudden change"],
+    "image": "/assets/images/cards/major/tower.jpg"
+  },
+  {
+    "id": "star",
+    "name": "The Star",
+    "arcana": "major",
+    "suit": null,
+    "number": 17,
+    "keywords": ["hope", "guidance", "healing"],
+    "image": "/assets/images/cards/major/star.jpg"
+  },
+  {
+    "id": "moon",
+    "name": "The Moon",
+    "arcana": "major",
+    "suit": null,
+    "number": 18,
+    "keywords": ["illusion", "fear", "subconscious"],
+    "image": "/assets/images/cards/major/moon.jpg"
+  },
+  {
+    "id": "sun",
+    "name": "The Sun",
+    "arcana": "major",
+    "suit": null,
+    "number": 19,
+    "keywords": ["success", "joy", "clarity"],
+    "image": "/assets/images/cards/major/sun.jpg"
+  },
+  {
+    "id": "aeon",
+    "name": "The Aeon",
+    "arcana": "major",
+    "suit": null,
+    "number": 20,
+    "keywords": ["awakening", "judgment", "rebirth"],
+    "image": "/assets/images/cards/major/aeon.jpg"
+  },
+  {
+    "id": "universe",
+    "name": "The Universe",
+    "arcana": "major",
+    "suit": null,
+    "number": 21,
+    "keywords": ["completion", "wholeness", "cosmos"],
+    "image": "/assets/images/cards/major/universe.jpg"
+  },
 
+  /* ===================== */
+  /*       MINOR ARCANA    */
+  /* ===================== */
+  
+  /* Cups */
+  { "id": "ace_cups", "name": "Ace of Cups", "arcana": "minor", "suit": "cups", "number": 1, "keywords": ["love","intuition"], "image": "/assets/images/cards/cups/ace.jpg" },
+  { "id": "2_cups", "name": "2 of Cups", "arcana": "minor", "suit": "cups", "number": 2, "keywords": ["union"], "image": "/assets/images/cards/cups/2.jpg" },
+  { "id": "3_cups", "name": "3 of Cups", "arcana": "minor", "suit": "cups", "number": 3, "keywords": ["celebration"], "image": "/assets/images/cards/cups/3.jpg" },
+  { "id": "4_cups", "name": "4 of Cups", "arcana": "minor", "suit": "cups", "number": 4, "keywords": ["apathy"], "image": "/assets/images/cards/cups/4.jpg" },
+  { "id": "5_cups", "name": "5 of Cups", "arcana": "minor", "suit": "cups", "number": 5, "keywords": ["loss"], "image": "/assets/images/cards/cups/5.jpg" },
+  { "id": "6_cups", "name": "6 of Cups", "arcana": "minor", "suit": "cups", "number": 6, "keywords": ["nostalgia"], "image": "/assets/images/cards/cups/6.jpg" },
+  { "id": "7_cups", "name": "7 of Cups", "arcana": "minor", "suit": "cups", "number": 7, "keywords": ["illusion"], "image": "/assets/images/cards/cups/7.jpg" },
+  { "id": "8_cups", "name": "8 of Cups", "arcana": "minor", "suit": "cups", "number": 8, "keywords": ["withdrawal"], "image": "/assets/images/cards/cups/8.jpg" },
+  { "id": "9_cups", "name": "9 of Cups", "arcana": "minor", "suit": "cups", "number": 9, "keywords": ["satisfaction"], "image": "/assets/images/cards/cups/9.jpg" },
+  { "id": "10_cups", "name": "10 of Cups", "arcana": "minor", "suit": "cups", "number": 10, "keywords": ["harmony"], "image": "/assets/images/cards/cups/10.jpg" },
+  { "id": "prince_cups", "name": "Prince of Cups", "arcana": "minor", "suit": "cups", "number": null, "keywords": ["romance"], "image": "/assets/images/cards/cups/prince.jpg" },
+  { "id": "princess_cups", "name": "Princess of Cups", "arcana": "minor", "suit": "cups", "number": null, "keywords": ["dream"], "image": "/assets/images/cards/cups/princess.jpg" },
+  { "id": "queen_cups", "name": "Queen of Cups", "arcana": "minor", "suit": "cups", "number": null, "keywords": ["emotion"], "image": "/assets/images/cards/cups/queen.jpg" },
+  { "id": "knight_cups", "name": "Knight of Cups", "arcana": "minor", "suit": "cups", "number": null, "keywords": ["charm"], "image": "/assets/images/cards/cups/knight.jpg" },
+
+  /* Swords */
+  { "id": "ace_swords", "name": "Ace of Swords", "arcana": "minor", "suit": "swords", "number": 1, "keywords": ["truth"], "image": "/assets/images/cards/swords/ace.jpg" },
+  { "id": "2_swords", "name": "2 of Swords", "arcana": "minor", "suit": "swords", "number": 2, "keywords": ["stalemate"], "image": "/assets/images/cards/swords/2.jpg" },
+  { "id": "3_swords", "name": "3 of Swords", "arcana": "minor", "suit": "swords", "number": 3, "keywords": ["sorrow"], "image": "/assets/images/cards/swords/3.jpg" },
+  { "id": "4_swords", "name": "4 of Swords", "arcana": "minor", "suit": "swords", "number": 4, "keywords": ["rest"], "image": "/assets/images/cards/swords/4.jpg" },
+  { "id": "5_swords", "name": "5 of Swords", "arcana": "minor", "suit": "swords", "number": 5, "keywords": ["conflict"], "image": "/assets/images/cards/swords/5.jpg" },
+  { "id": "6_swords", "name": "6 of Swords", "arcana": "minor", "suit": "swords", "number": 6, "keywords": ["transition"], "image": "/assets/images/cards/swords/6.jpg" },
+  { "id": "7_swords", "name": "7 of Swords", "arcana": "minor", "suit": "swords", "number": 7, "keywords": ["deception"], "image": "/assets/images/cards/swords/7.jpg" },
+  { "id": "8_swords", "name": "8 of Swords", "arcana": "minor", "suit": "swords", "number": 8, "keywords": ["restriction"], "image": "/assets/images/cards/swords/8.jpg" },
+  { "id": "9_swords", "name": "9 of Swords", "arcana": "minor", "suit": "swords", "number": 9, "keywords": ["anxiety"], "image": "/assets/images/cards/swords/9.jpg" },
+  { "id": "10_swords", "name": "10 of Swords", "arcana": "minor", "suit": "swords", "number": 10, "keywords": ["end"], "image": "/assets/images/cards/swords/10.jpg" },
+  { "id": "prince_swords", "name": "Prince of Swords", "arcana": "minor", "suit": "swords", "number": null, "keywords": ["logic"], "image": "/assets/images/cards/swords/prince.jpg" },
+  { "id": "princess_swords", "name": "Princess of Swords", "arcana": "minor", "suit": "swords", "number": null, "keywords": ["curiosity"], "image": "/assets/images/cards/swords/princess.jpg" },
+  { "id": "queen_swords", "name": "Queen of Swords", "arcana": "minor", "suit": "swords", "number": null, "keywords": ["clarity"], "image": "/assets/images/cards/swords/queen.jpg" },
+  { "id": "knight_swords", "name": "Knight of Swords", "arcana": "minor", "suit": "swords", "number": null, "keywords": ["action"], "image": "/assets/images/cards/swords/knight.jpg" },
+
+  /* Wands */
+  { "id": "ace_wands", "name": "Ace of Wands", "arcana": "minor", "suit": "wands", "number": 1, "keywords": ["energy"], "image": "/assets/images/cards/wands/ace.jpg" },
+  { "id": "2_wands", "name": "2 of Wands", "arcana": "minor", "suit": "wands", "number": 2, "keywords": ["planning"], "image": "/assets/images/cards/wands/2.jpg" },
+  { "id": "3_wands", "name": "3 of Wands", "arcana": "minor", "suit": "wands", "number": 3, "keywords": ["growth"], "image": "/assets/images/cards/wands/3.jpg" },
+  { "id": "4_wands", "name": "4 of Wands", "arcana": "minor", "suit": "wands", "number": 4, "keywords": ["celebration"], "image": "/assets/images/cards/wands/4.jpg" },
+  { "id": "5_wands", "name": "5 of Wands", "arcana": "minor", "suit": "wands", "number": 5, "keywords": ["competition"], "image": "/assets/images/cards/wands/5.jpg" },
+  { "id": "6_wands", "name": "6 of Wands", "arcana": "minor", "suit": "wands", "number": 6, "keywords": ["victory"], "image": "/assets/images/cards/wands/6.jpg" },
+  { "id": "7_wands", "name": "7 of Wands", "arcana": "minor", "suit": "wands", "number": 7, "keywords": ["defense"], "image": "/assets/images/cards/wands/7.jpg" },
+  { "id": "8_wands", "name": "8 of Wands", "arcana": "minor", "suit": "wands", "number": 8, "keywords": ["speed"], "image": "/assets/images/cards/wands/8.jpg" },
+  { "id": "9_wands", "name": "9 of Wands", "arcana": "minor", "suit": "wands", "number": 9, "keywords": ["resilience"], "image": "/assets/images/cards/wands/9.jpg" },
+  { "id": "10_wands", "name": "10 of Wands", "arcana": "minor", "suit": "wands", "number": 10, "keywords": ["burden"], "image": "/assets/images/cards/wands/10.jpg" },
+  { "id": "prince_wands", "name": "Prince of Wands", "arcana": "minor", "suit": "wands", "number": null, "keywords": ["impulse"], "image": "/assets/images/cards/wands/prince.jpg" },
+  { "id": "princess_wands", "name": "Princess of Wands", "arcana": "minor", "suit": "wands", "number": null, "keywords": ["exploration"], "image": "/assets/images/cards/wands/princess.jpg" },
+  { "id": "queen_wands", "name": "Queen of Wands", "arcana": "minor", "suit": "wands", "number": null, "keywords": ["confidence"], "image": "/assets/images/cards/wands/queen.jpg" },
+  { "id": "knight_wands", "name": "Knight of Wands", "arcana": "minor", "suit": "wands", "number": null, "keywords": ["drive"], "image": "/assets/images/cards/wands/knight.jpg" },
+
+  /* Disks */
+  { "id": "ace_disks", "name": "Ace of Disks", "arcana": "minor", "suit": "disks", "number": 1, "keywords": ["manifestation"], "image": "/assets/images/cards/disks/ace.jpg" },
+  { "id": "2_disks", "name": "2 of Disks", "arcana": "minor", "suit": "disks", "number": 2, "keywords": ["balance"], "image": "/assets/images/cards/disks/2.jpg" },
+  { "id": "3_disks", "name": "3 of Disks", "arcana": "minor", "suit": "disks", "number": 3, "keywords": ["work"], "image": "/assets/images/cards/disks/3.jpg" },
+  { "id": "4_disks", "name": "4 of Disks", "arcana": "minor", "suit": "disks", "number": 4, "keywords": ["control"], "image": "/assets/images/cards/disks/4.jpg" },
+  { "id": "5_disks", "name": "5 of Disks", "arcana": "minor", "suit": "disks", "number": 5, "keywords": ["worry"], "image": "/assets/images/cards/disks/5.jpg" },
+  { "id": "6_disks", "name": "6 of Disks", "arcana": "minor", "suit": "disks", "number": 6, "keywords": ["success"], "image": "/assets/images/cards/disks/6.jpg" },
+  { "id": "7_disks", "name": "7 of Disks", "arcana": "minor", "suit": "disks", "number": 7, "keywords": ["failure"], "image": "/assets/images/cards/disks/7.jpg" },
+  { "id": "8_disks", "name": "8 of Disks", "arcana": "minor", "suit": "disks", "number": 8, "keywords": ["skill"], "image": "/assets/images/cards/disks/8.jpg" },
+  { "id": "9_disks", "name": "9 of Disks", "arcana": "minor", "suit": "disks", "number": 9, "keywords": ["luxury"], "image": "/assets/images/cards/disks/9.jpg" },
+  { "id": "10_disks", "name": "10 of Disks", "arcana": "minor", "suit": "disks", "number": 10, "keywords": ["wealth"], "image": "/assets/images/cards/disks/10.jpg" },
+  { "id": "prince_disks", "name": "Prince of Disks", "arcana": "minor", "suit": "disks", "number": null, "keywords": ["effort"], "image": "/assets/images/cards/disks/prince.jpg" },
+  { "id": "princess_disks", "name": "Princess of Disks", "arcana": "minor", "suit": "disks", "number": null, "keywords": ["growth"], "image": "/assets/images/cards/disks/princess.jpg" },
+  { "id": "queen_disks", "name": "Queen of Disks", "arcana": "minor", "suit": "disks", "number": null, "keywords": ["nurture"], "image": "/assets/images/cards/disks/queen.jpg" },
+  { "id": "knight_disks", "name": "Knight of Disks", "arcana": "minor", "suit": "disks", "number": null, "keywords": ["persistence"], "image": "/assets/images/cards/disks/knight.jpg" }
+]
