@@ -1,5 +1,5 @@
 
-import TarotEngine from "../../Services/TarotEngine.js";
+import TarotEngine from "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Services/TarotEngine.js";
 
 const drawButton = document.getElementById("draw-btn");
 const resultContainer = document.getElementById("cards-container");
