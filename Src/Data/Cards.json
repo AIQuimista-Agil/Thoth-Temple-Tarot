@@ -254,18 +254,18 @@
   { "id": "knight_wands", "name": "Knight of Wands", "arcana": "minor", "suit": "wands", "number": null, "keywords": ["drive"], "image": "/Assets/Images/Cards//Wands/WKN.png" },
 
   /* Disks */
-  { "id": "ace_disks", "name": "Ace of Disks", "arcana": "minor", "suit": "disks", "number": 1, "keywords": ["manifestation"], "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png" },
-  { "id": "2_disks", "name": "2 of Disks", "arcana": "minor", "suit": "disks", "number": 2, "keywords": ["balance"], "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png" },
-  { "id": "3_disks", "name": "3 of Disks", "arcana": "minor", "suit": "disks", "number": 3, "keywords": ["work"], "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png" },
-  { "id": "4_disks", "name": "4 of Disks", "arcana": "minor", "suit": "disks", "number": 4, "keywords": ["control"], "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png" },
-  { "id": "5_disks", "name": "5 of Disks", "arcana": "minor", "suit": "disks", "number": 5, "keywords": ["worry"], "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png" },
-  { "id": "6_disks", "name": "6 of Disks", "arcana": "minor", "suit": "disks", "number": 6, "keywords": ["success"], "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png" },
-  { "id": "7_disks", "name": "7 of Disks", "arcana": "minor", "suit": "disks", "number": 7, "keywords": ["failure"], "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png" },
-  { "id": "8_disks", "name": "8 of Disks", "arcana": "minor", "suit": "disks", "number": 8, "keywords": ["skill"], "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png" },
-  { "id": "9_disks", "name": "9 of Disks", "arcana": "minor", "suit": "disks", "number": 9, "keywords": ["luxury"], "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png" },
-  { "id": "10_disks", "name": "10 of Disks", "arcana": "minor", "suit": "disks", "number": 10, "keywords": ["wealth"], "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png" },
-  { "id": "prince_disks", "name": "Prince of Disks", "arcana": "minor", "suit": "disks", "number": null, "keywords": ["effort"], "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png" },
-  { "id": "princess_disks", "name": "Princess of Disks", "arcana": "minor", "suit": "disks", "number": null, "keywords": ["growth"], "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png" },
-  { "id": "queen_disks", "name": "Queen of Disks", "arcana": "minor", "suit": "disks", "number": null, "keywords": ["nurture"], "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png" },
-  { "id": "knight_disks", "name": "Knight of Disks", "arcana": "minor", "suit": "disks", "number": null, "keywords": ["persistence"], "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png" }
+  { "id": "ace_disks", "name": "Ace of Disks", "arcana": "minor", "suit": "disks", "number": 1, "keywords": ["manifestation"], "image": "/Assets/Images/Cards/Disks/D01-Ace.png" },
+  { "id": "2_disks", "name": "2 of Disks", "arcana": "minor", "suit": "disks", "number": 2, "keywords": ["balance"], "image": "/Assets/Images/Cards/Disks/D02-Change.png" },
+  { "id": "3_disks", "name": "3 of Disks", "arcana": "minor", "suit": "disks", "number": 3, "keywords": ["work"], "image": "/Assets/Images/Cards/Disks/D03-Work.png" },
+  { "id": "4_disks", "name": "4 of Disks", "arcana": "minor", "suit": "disks", "number": 4, "keywords": ["control"], "image": "/Assets/Images/Cards/Disks/D04-Power.png" },
+  { "id": "5_disks", "name": "5 of Disks", "arcana": "minor", "suit": "disks", "number": 5, "keywords": ["worry"], "image": "/Assets/Images/Cards/Disks/D05-Worry.png" },
+  { "id": "6_disks", "name": "6 of Disks", "arcana": "minor", "suit": "disks", "number": 6, "keywords": ["success"], "image": "/Assets/Images/Cards/Disks/D06-Success.png" },
+  { "id": "7_disks", "name": "7 of Disks", "arcana": "minor", "suit": "disks", "number": 7, "keywords": ["failure"], "image": "/Assets/Images/Cards/Disks/D07-Failure.png" },
+  { "id": "8_disks", "name": "8 of Disks", "arcana": "minor", "suit": "disks", "number": 8, "keywords": ["skill"], "image": "/Assets/Images/Cards/Disks/D08-Prudence.png" },
+  { "id": "9_disks", "name": "9 of Disks", "arcana": "minor", "suit": "disks", "number": 9, "keywords": ["luxury"], "image": "/Assets/Images/Cards/Disks/D09-Gain.png" },
+  { "id": "10_disks", "name": "10 of Disks", "arcana": "minor", "suit": "disks", "number": 10, "keywords": ["wealth"], "image": "/Assets/Images/Cards/Disks/D10-Wealth.png" },
+  { "id": "prince_disks", "name": "Prince of Disks", "arcana": "minor", "suit": "disks", "number": null, "keywords": ["effort"], "image": "/Assets/Images/Cards/Disks/DPM.png" },
+  { "id": "princess_disks", "name": "Princess of Disks", "arcana": "minor", "suit": "disks", "number": null, "keywords": ["growth"], "image": "/Assets/Images/Cards/Disks/DPF.png" },
+  { "id": "queen_disks", "name": "Queen of Disks", "arcana": "minor", "suit": "disks", "number": null, "keywords": ["nurture"], "image": "/Assets/Images/Cards/Disks/DQN.png" },
+  { "id": "knight_disks", "name": "Knight of Disks", "arcana": "minor", "suit": "disks", "number": null, "keywords": ["persistence"], "image": "/Assets/Images/Cards/Disks/DKN.png" }
 ]
