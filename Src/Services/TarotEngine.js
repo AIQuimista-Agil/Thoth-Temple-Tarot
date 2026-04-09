@@ -1,8 +1,6 @@
-// tarotEngine.js
 
 import cards from "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Data/Cards.json";
 
-// Fisher-Yates shuffle (el bueno 🔥)
 function shuffleDeck(deck) {
   const shuffled = [...deck];
 
@@ -14,12 +12,10 @@ function shuffleDeck(deck) {
   return shuffled;
 }
 
-// Define si la carta sale invertida
 function getOrientation() {
   return Math.random() < 0.5 ? "upright" : "reversed";
 }
 
-// Tirada simple (Draw Cards)
 function drawCards(count = 1) {
   const deck = shuffleDeck(cards);
 
@@ -31,18 +27,7 @@ function drawCards(count = 1) {
   }));
 }
 
-// Tirada con spread (Use Tarot Spread)
 function drawSpread(spread) {
-  /**
-   spread = {
-   *   name: "Celtic Cross",
-   *   positions: [
-   *     "Present",
-   *     "Challenge",
-   *     ...
-   *   ]
-   * }
-   */
 
   const deck = shuffleDeck(cards);
 
@@ -57,7 +42,6 @@ function drawSpread(spread) {
   });
 }
 
-// Conteo de energías (útil para interpretación futura)
 function analyzeElements(cardsDrawn) {
   const elements = {
     fire: 0,
@@ -86,7 +70,6 @@ function analyzeElements(cardsDrawn) {
   return elements;
 }
 
-// Detecta mayoría (ej: lectura muy emocional, muy mental, etc.)
 function getDominantElement(elements) {
   return Object.keys(elements).reduce((a, b) =>
     elements[a] > elements[b] ? a : b
