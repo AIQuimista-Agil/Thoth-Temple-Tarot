@@ -1,6 +1,6 @@
 // tarotEngine.js
 
-import cards from "../Data/Cards.js";
+import cards from "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Data/Cards.json";
 
 /* ===================== */
 /*      UTILITIES        */
