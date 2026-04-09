@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Draw Cards - Thoth Temple Tarot</title>
+  <link rel="stylesheet" href="./DrawCards.css">
+</head>
+<body>
+
+  <h1>Draw Cards</h1>
+
+  <!-- Question -->
+  <div class="input-group">
+    <label>Your Question:</label>
+    <input id="question" type="text" placeholder="Ask the tarot..." />
+  </div>
+
+  <!-- Number of cards -->
+  <div class="input-group">
+    <label>Select number of cards:</label>
+    <select id="card-count">
+      <option value="1">1</option>
+      <option value="3">3</option>
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="13">13</option>
+    </select>
+  </div>
+
+  <!-- Button -->
+  <button id="draw-btn">Ask the Tarot</button>
+
+  <!-- Result -->
+  <div id="cards-container"></div>
+
+  <script type="module" src="./DrawCards.js"></script>
+</body>
+</html>
