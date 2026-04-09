@@ -1,7 +1,4 @@
 [
-  /* ===================== */
-  /*       MAJOR ARCANA    */
-  /* ===================== */
   {
     "id": "fool",
     "name": "The Fool",
@@ -200,12 +197,7 @@
     "keywords": ["completion", "wholeness", "cosmos"],
     "image": "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Assets/Images/Cards/MajorArcana/A-XXI-Universe.png"
   },
-
-  /* ===================== */
-  /*       MINOR ARCANA    */
-  /* ===================== */
   
-  /* Cups */
   { "id": "ace_cups", "name": "Ace of Cups", "arcana": "minor", "suit": "cups", "number": 1, "keywords": ["love","intuition"], "image": "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Assets/Images/Cards/Cups/C01-Ace.png" },
   { "id": "2_cups", "name": "2 of Cups", "arcana": "minor", "suit": "cups", "number": 2, "keywords": ["union"], "image": "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Assets/Images/Cards/Cups/C02-Love.png" },
   { "id": "3_cups", "name": "3 of Cups", "arcana": "minor", "suit": "cups", "number": 3, "keywords": ["celebration"], "image": "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Assets/Images/Cards/Cups/C03-Abundance.png" },
@@ -221,7 +213,6 @@
   { "id": "queen_cups", "name": "Queen of Cups", "arcana": "minor", "suit": "cups", "number": null, "keywords": ["emotion"], "image": "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Assets/Images/Cards/Cups/CQN.png" },
   { "id": "knight_cups", "name": "Knight of Cups", "arcana": "minor", "suit": "cups", "number": null, "keywords": ["charm"], "image": "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Assets/Images/Cards/Cups/CKN.png" },
 
-  /* Swords */
   { "id": "ace_swords", "name": "Ace of Swords", "arcana": "minor", "suit": "swords", "number": 1, "keywords": ["truth"], "image": "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Assets/Images/Cards/Swords/S01-Ace.png" },
   { "id": "2_swords", "name": "2 of Swords", "arcana": "minor", "suit": "swords", "number": 2, "keywords": ["stalemate"], "image": "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Assets/Images/Cards/Swords/S02-Peace.png" },
   { "id": "3_swords", "name": "3 of Swords", "arcana": "minor", "suit": "swords", "number": 3, "keywords": ["sorrow"], "image": "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Assets/Images/Cards/Swords/S03-Sorrow.png" },
@@ -237,7 +228,6 @@
   { "id": "queen_swords", "name": "Queen of Swords", "arcana": "minor", "suit": "swords", "number": null, "keywords": ["clarity"], "image": "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Assets/Images/Cards/Swords/SQN.png" },
   { "id": "knight_swords", "name": "Knight of Swords", "arcana": "minor", "suit": "swords", "number": null, "keywords": ["action"], "image": "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Assets/Images/Cards/Swords/SKN.png" },
 
-  /* Wands */
   { "id": "ace_wands", "name": "Ace of Wands", "arcana": "minor", "suit": "wands", "number": 1, "keywords": ["energy"], "image": "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Assets/Images/Cards//Wands/W01-Ace.png" },
   { "id": "2_wands", "name": "2 of Wands", "arcana": "minor", "suit": "wands", "number": 2, "keywords": ["planning"], "image": "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Assets/Images/Cards//Wands/W02-Dominion.png" },
   { "id": "3_wands", "name": "3 of Wands", "arcana": "minor", "suit": "wands", "number": 3, "keywords": ["growth"], "image": "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Assets/Images/Cards//Wands/W03-Virtue.png" },
@@ -253,7 +243,6 @@
   { "id": "queen_wands", "name": "Queen of Wands", "arcana": "minor", "suit": "wands", "number": null, "keywords": ["confidence"], "image": "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Assets/Images/Cards//Wands/WQN.png" },
   { "id": "knight_wands", "name": "Knight of Wands", "arcana": "minor", "suit": "wands", "number": null, "keywords": ["drive"], "image": "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Assets/Images/Cards//Wands/WKN.png" },
 
-  /* Disks */
   { "id": "ace_disks", "name": "Ace of Disks", "arcana": "minor", "suit": "disks", "number": 1, "keywords": ["manifestation"], "image": "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Assets/Images/Cards/Disks/D01-Ace.png" },
   { "id": "2_disks", "name": "2 of Disks", "arcana": "minor", "suit": "disks", "number": 2, "keywords": ["balance"], "image": "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Assets/Images/Cards/Disks/D02-Change.png" },
   { "id": "3_disks", "name": "3 of Disks", "arcana": "minor", "suit": "disks", "number": 3, "keywords": ["work"], "image": "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Assets/Images/Cards/Disks/D03-Work.png" },
