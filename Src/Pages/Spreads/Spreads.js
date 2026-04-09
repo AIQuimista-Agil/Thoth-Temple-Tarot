@@ -1,5 +1,5 @@
 
-import TarotEngine from "../../Services/TarotEngine.js";
+import TarotEngine from "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Services/TarotEngine.js";
 
 const spreadButton = document.getElementById("spread-btn");
 const resultContainer = document.getElementById("spread-container");
