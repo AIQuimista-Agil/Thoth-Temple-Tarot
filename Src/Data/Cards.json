@@ -18,7 +18,7 @@
     "suit": null,
     "number": 1,
     "keywords": ["will", "creation", "skill"],
-    "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png"
+    "image": "/Assets/Images/Cards/MajorArcana/A-I-Magus.png"
   },
   {
     "id": "priestess",
@@ -27,7 +27,7 @@
     "suit": null,
     "number": 2,
     "keywords": ["intuition", "mystery", "inner knowledge"],
-    "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png"
+    "image": "/Assets/Images/Cards/MajorArcana/A-II-Priestess.png"
   },
   {
     "id": "empress",
@@ -36,7 +36,7 @@
     "suit": null,
     "number": 3,
     "keywords": ["fertility", "nature", "abundance"],
-    "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png"
+    "image": "/Assets/Images/Cards/MajorArcana/A-III-Empress.png"
   },
   {
     "id": "emperor",
@@ -45,7 +45,7 @@
     "suit": null,
     "number": 4,
     "keywords": ["authority", "structure", "control"],
-    "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png"
+    "image": "/Assets/Images/Cards/MajorArcana/A-IV-Emperor.png"
   },
   {
     "id": "hierophant",
@@ -54,7 +54,7 @@
     "suit": null,
     "number": 5,
     "keywords": ["tradition", "beliefs", "guidance"],
-    "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png"
+    "image": "/Assets/Images/Cards/MajorArcana/A-V-Hierophant.png"
   },
   {
     "id": "lovers",
@@ -63,7 +63,7 @@
     "suit": null,
     "number": 6,
     "keywords": ["union", "choice", "love"],
-    "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png"
+    "image": "/Assets/Images/Cards/MajorArcana/A-VI-Lovers.png"
   },
   {
     "id": "chariot",
@@ -72,7 +72,7 @@
     "suit": null,
     "number": 7,
     "keywords": ["victory", "willpower", "movement"],
-    "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png"
+    "image": "/Assets/Images/Cards/MajorArcana/A-VII-Chariot.png"
   },
   {
     "id": "adjustment",
@@ -81,7 +81,7 @@
     "suit": null,
     "number": 8,
     "keywords": ["balance", "truth", "justice"],
-    "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png"
+    "image": "/Assets/Images/Cards/MajorArcana/A-VIII-Adjustment.png"
   },
   {
     "id": "hermit",
@@ -90,7 +90,7 @@
     "suit": null,
     "number": 9,
     "keywords": ["solitude", "wisdom", "search"],
-    "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png"
+    "image": "/Assets/Images/Cards/MajorArcana/A-IX-Hermit.png"
   },
   {
     "id": "fortune",
@@ -99,7 +99,7 @@
     "suit": null,
     "number": 10,
     "keywords": ["cycles", "change", "destiny"],
-    "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png"
+    "image": "/Assets/Images/Cards/MajorArcana/A-X-Fortune.png"
   },
   {
     "id": "lust",
@@ -108,7 +108,7 @@
     "suit": null,
     "number": 11,
     "keywords": ["passion", "strength", "desire"],
-    "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png"
+    "image": "/Assets/Images/Cards/MajorArcana/A-XI-Lust.png"
   },
   {
     "id": "hanged_man",
@@ -117,7 +117,7 @@
     "suit": null,
     "number": 12,
     "keywords": ["sacrifice", "perspective", "letting go"],
-    "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png"
+    "image": "/Assets/Images/Cards/MajorArcana/A-XII-Hanged-Man.png"
   },
   {
     "id": "death",
@@ -126,7 +126,7 @@
     "suit": null,
     "number": 13,
     "keywords": ["transformation", "endings", "rebirth"],
-    "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png"
+    "image": "/Assets/Images/Cards/MajorArcana/A-XIII-Death.png"
   },
   {
     "id": "art",
@@ -135,7 +135,7 @@
     "suit": null,
     "number": 14,
     "keywords": ["alchemy", "balance", "integration"],
-    "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png"
+    "image": "/Assets/Images/Cards/MajorArcana/A-XIV-Art.png"
   },
   {
     "id": "devil",
@@ -144,7 +144,7 @@
     "suit": null,
     "number": 15,
     "keywords": ["bondage", "materialism", "shadow"],
-    "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png"
+    "image": "/Assets/Images/Cards/MajorArcana/A-XV-Devil.png"
   },
   {
     "id": "tower",
@@ -153,7 +153,7 @@
     "suit": null,
     "number": 16,
     "keywords": ["collapse", "revelation", "sudden change"],
-    "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png"
+    "image": "/Assets/Images/Cards/MajorArcana/A-XVI-Tower.png"
   },
   {
     "id": "star",
@@ -162,7 +162,7 @@
     "suit": null,
     "number": 17,
     "keywords": ["hope", "guidance", "healing"],
-    "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png"
+    "image": "/Assets/Images/Cards/MajorArcana/A-XVII-Star.png"
   },
   {
     "id": "moon",
@@ -171,7 +171,7 @@
     "suit": null,
     "number": 18,
     "keywords": ["illusion", "fear", "subconscious"],
-    "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png"
+    "image": "/Assets/Images/Cards/MajorArcana/A-XVIII-Moon.png"
   },
   {
     "id": "sun",
@@ -180,7 +180,7 @@
     "suit": null,
     "number": 19,
     "keywords": ["success", "joy", "clarity"],
-    "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png"
+    "image": "/Assets/Images/Cards/MajorArcana/A-XIX-Sun.png"
   },
   {
     "id": "aeon",
@@ -189,7 +189,7 @@
     "suit": null,
     "number": 20,
     "keywords": ["awakening", "judgment", "rebirth"],
-    "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png"
+    "image": "/Assets/Images/Cards/MajorArcana/A-XX-Aeon.png"
   },
   {
     "id": "universe",
@@ -198,7 +198,7 @@
     "suit": null,
     "number": 21,
     "keywords": ["completion", "wholeness", "cosmos"],
-    "image": "/Assets/Images/Cards/MajorArcana/A-00-Fool.png"
+    "image": "/Assets/Images/Cards/MajorArcana/A-XXI-Universe.png"
   },
 
   /* ===================== */
