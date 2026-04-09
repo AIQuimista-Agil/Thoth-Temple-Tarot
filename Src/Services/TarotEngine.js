@@ -2,10 +2,6 @@
 
 import cards from "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Data/Cards.json";
 
-/* ===================== */
-/*      UTILITIES        */
-/* ===================== */
-
 // Fisher-Yates shuffle (el bueno 🔥)
 function shuffleDeck(deck) {
   const shuffled = [...deck];
@@ -22,10 +18,6 @@ function shuffleDeck(deck) {
 function getOrientation() {
   return Math.random() < 0.5 ? "upright" : "reversed";
 }
-
-/* ===================== */
-/*      CORE LOGIC       */
-/* ===================== */
 
 // Tirada simple (Draw Cards)
 function drawCards(count = 1) {
@@ -65,10 +57,6 @@ function drawSpread(spread) {
   });
 }
 
-/* ===================== */
-/*      EXTRA (PRO)      */
-/* ===================== */
-
 // Conteo de energías (útil para interpretación futura)
 function analyzeElements(cardsDrawn) {
   const elements = {
@@ -104,10 +92,6 @@ function getDominantElement(elements) {
     elements[a] > elements[b] ? a : b
   );
 }
-
-/* ===================== */
-/*      EXPORT           */
-/* ===================== */
 
 const TarotEngine = {
   shuffleDeck,
