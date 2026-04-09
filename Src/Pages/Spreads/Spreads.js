@@ -42,10 +42,6 @@ spreadButton.addEventListener("click", () => {
   renderSpread(result);
 });
 
-/* ===================== */
-/*     RENDER SPREAD     */
-/* ===================== */
-
 function renderSpread(cards) {
   resultContainer.innerHTML = "";
 
