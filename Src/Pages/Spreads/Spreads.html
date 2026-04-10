@@ -1,35 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Tarot Spreads - Thoth Temple Tarot</title>
   <link rel="stylesheet" href="./Spreads.css">
 </head>
 <body>
+  <main>
+    <h1>Tarot Spreads</h1>
 
-  <h1>Tarot Spreads</h1>
+    <!-- Question -->
+    <div class="input-group">
+      <label for="question">Tu pregunta</label>
+      <input id="question" name="question" type="text" placeholder="Pregunta al tarot..." />
+    </div>
 
-  <!-- Question -->
-  <div class="input-group">
-    <label>Your Question:</label>
-    <input id="question" type="text" placeholder="Ask the tarot..." />
-  </div>
+    <!-- Spread selector -->
+    <div class="input-group">
+      <label for="spread-type">Selecciona tirada</label>
+      <select id="spread-type" name="spread-type">
+        <option value="three_card">Past - Present - Future</option>
+        <option value="celtic_cross">Celtic Cross</option>
+      </select>
+    </div>
 
-  <!-- Spread selector -->
-  <div class="input-group">
-    <label>Select Spread:</label>
-    <select id="spread-type">
-      <option value="three_card">Past - Present - Future</option>
-      <option value="celtic_cross">Celtic Cross</option>
-    </select>
-  </div>
+    <!-- Button -->
+    <button id="spread-btn" type="button">Ask the Tarot</button>
 
-  <!-- Button -->
-  <button id="spread-btn">Ask the Tarot</button>
+    <!-- Result -->
+    <div id="spread-container" aria-live="polite"></div>
+  </main>
 
-  <!-- Result -->
-  <div id="spread-container"></div>
-
-  <script type="module" src="./Spreads.js"></script>
+  <!-- Módulo principal -->
+  <script type="module" src="https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Pages/Spreads/Spreads.js" crossorigin="anonymous"></script>
 </body>
 </html>
