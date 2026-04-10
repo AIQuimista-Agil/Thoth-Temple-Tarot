@@ -1,33 +1,47 @@
-/* Spreads.css - estilos para tiradas y cartas invertidas */
+/* Spreads.css
+   Versión lista para pegar: estilos base, tres cartas y Cruz Celta (posiciones tradicionales),
+   manejo visual de cartas invertidas y responsivo.
+*/
 
-/* Reset y base */
+/* =========================
+   Variables y reset
+   ========================= */
 :root{
-  --bg:#0d0d0d;
-  --fg:#fff;
-  --accent: #d4af37; /* gold */
+  --bg: #0b0b0b;
+  --fg: #ffffff;
+  --accent: #d4af37;
   --card-w: 140px;
   --card-h: 200px;
-  --gap: 18px;
+  --gap: 16px;
+  --max-width: 1100px;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; padding: 0; }
 body {
-  margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  text-align: center;
   background: linear-gradient(180deg,#070707 0%, #0d0d0d 100%);
   color: var(--fg);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
   padding: 24px;
 }
 
-/* Formularios */
-.input-group {
-  margin: 12px 0;
+/* =========================
+   Formulario y controles
+   ========================= */
+.input-group { margin: 12px 0; }
+label { display:block; margin-bottom:6px; font-weight:600; color:var(--fg); }
+input[type="text"], select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.02);
+  color: var(--fg);
+  width: 260px;
+  max-width: 90%;
 }
-label { display:block; margin-bottom:6px; font-weight:600; }
 
 /* Botón */
 button {
@@ -38,146 +52,199 @@ button {
   border: none;
   cursor: pointer;
   margin-top: 12px;
-  font-weight:700;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
 }
-button:disabled { opacity:0.6; cursor:not-allowed; transform:none; }
+button:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
 
-/* Contenedor general: fallback grid */
+/* =========================
+   Contenedor de tiradas
+   ========================= */
 #spread-container {
   margin-top: 28px;
   padding: 18px;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: var(--gap);
   justify-items: center;
   align-items: center;
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-/* Tarjeta */
+/* =========================
+   Tarjeta (componente)
+   ========================= */
 .card {
   width: var(--card-w);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  color: var(--fg);
 }
-.card p { margin: 0; font-size: 0.9rem; }
-.card .label { font-weight:700; font-size:0.85rem; opacity:0.9; }
+.card .label { font-weight:700; font-size:0.9rem; color:var(--fg); }
+.card .title { font-size:0.95rem; color:var(--fg); }
 
-/* Imagen de carta */
+/* Imagen de carta: usamos variable --rot para combinar rotaciones sin romper hover */
 .card img {
   width: var(--card-w);
   height: var(--card-h);
   object-fit: cover;
   border-radius: 8px;
-  transition: transform 0.45s cubic-bezier(.2,.9,.2,1), box-shadow 0.25s;
   transform-origin: 50% 50%;
+  transition: transform 0.35s cubic-bezier(.2,.9,.2,1), box-shadow 0.25s;
   box-shadow: 0 8px 18px rgba(0,0,0,0.6);
   background: linear-gradient(180deg,#fff 0%, #eee 100%);
   border: 1px solid rgba(255,255,255,0.06);
+  --rot: 0deg;
+  transform: rotate(var(--rot)) translateY(0) scale(1);
 }
 
-/* Carta invertida: rotación + estilo distintivo */
-.card img.reversed {
-  transform: rotate(180deg);
-  filter: hue-rotate(10deg) saturate(0.9) brightness(0.95);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.7), inset 0 0 18px rgba(0,0,0,0.06);
-  opacity: 0.98;
-}
+/* Carta invertida: ajusta la variable de rotación */
+.card img.reversed { --rot: 180deg; filter: saturate(0.95) brightness(0.98); }
 
-/* Hover: levantar carta */
+/* Hover: solo translate/scale para preservar rotación variable */
 .card img:hover {
-  transform: translateY(-6px) scale(1.02);
+  transform: rotate(var(--rot)) translateY(-8px) scale(1.03);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.75);
+}
+
+/* Fallback si no hay imagen */
+.card img[alt="Card"][src=""] {
+  background: linear-gradient(180deg,#222,#111);
+  display:block;
 }
 
 /* =========================
-   Disposición: Three Card
-   =========================
-   Usa: #spread-container.three-card
-*/
+   Three-card layout (Past - Present - Future)
+   ========================= */
 #spread-container.three-card {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 28px;
-  flex-wrap: nowrap;
   padding: 28px;
+  flex-wrap: nowrap;
 }
-
-/* Asegurar orden Past - Present - Future (si quieres forzar por index, JS puede añadir clases) */
 #spread-container.three-card .card { flex: 0 0 auto; }
 
+/* Asegura orden visual si JS añade pos-1,pos-2,pos-3 */
+#spread-container.three-card .pos-1 { order: 1; } /* Past */
+#spread-container.three-card .pos-2 { order: 2; } /* Present */
+#spread-container.three-card .pos-3 { order: 3; } /* Future */
+
 /* =========================
-   Disposición: Celtic Cross
+   Celtic Cross layout (posiciones tradicionales)
    =========================
-   Usa: #spread-container.celtic-cross
-   Grid con área central (cruz) y columna de 6 cartas a la derecha
+   Requiere:
+     - Añadir la clase 'celtic-cross' a #spread-container
+     - Añadir a cada .card la clase pos-N (pos-1 ... pos-10) según el orden de spread.positions
+   Mapeo tradicional:
+     1: Central issue (center)
+     2: What crosses you (over central, rotated 90deg)
+     3: What lies below (foundation) -> below center
+     4: What lies behind (past) -> left of center
+     5: What lies above (conscious) -> above center
+     6: What lies before (future) -> right of center
+     7: Yourself -> top of right column
+     8: Your environment -> next down
+     9: Hopes and Fears -> next down
+     10: Outcome -> bottom of right column
 */
 #spread-container.celtic-cross {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-template-rows: repeat(4, auto);
-  gap: 12px;
-  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* 6 columns: center area around cols 3-4, right column at col 6 */
+  grid-template-rows: auto auto auto auto;
+  gap: var(--gap);
   justify-items: center;
+  align-items: center;
   padding: 18px;
+  position: relative;
 }
 
-/* Mapeo de posiciones: asigna clases a cada .card en renderSpread para colocarlas correctamente.
-   Ejemplo de clases esperadas: pos-1, pos-2, ... pos-10 (según tu spread.positions order)
-*/
+/* Mantener ancho de las cartas */
 #spread-container.celtic-cross .card { width: var(--card-w); }
 
-/* Cross center: colocación aproximada */
-#spread-container.celtic-cross .pos-1  { grid-column: 2 / 3; grid-row: 2 / 3; } /* Present (center) */
-#spread-container.celtic-cross .pos-2  { grid-column: 2 / 3; grid-row: 2 / 3; transform: rotate(90deg); } /* Challenge - overlaid horizontally */
-#spread-container.celtic-cross .pos-3  { grid-column: 1 / 2; grid-row: 1 / 2; } /* Past - top-left (adjust if needed) */
-#spread-container.celtic-cross .pos-4  { grid-column: 3 / 4; grid-row: 1 / 2; } /* Future - top-right */
-#spread-container.celtic-cross .pos-5  { grid-column: 2 / 3; grid-row: 1 / 2; } /* Above - above center */
-#spread-container.celtic-cross .pos-6  { grid-column: 2 / 3; grid-row: 3 / 4; } /* Below - below center */
-#spread-container.celtic-cross .pos-7  { grid-column: 4 / 4; grid-row: 1 / 2; } /* Advice - right column (stack start) */
-#spread-container.celtic-cross .pos-8  { grid-column: 4 / 4; grid-row: 2 / 3; } /* External */
-#spread-container.celtic-cross .pos-9  { grid-column: 4 / 4; grid-row: 3 / 4; } /* Hopes */
-#spread-container.celtic-cross .pos-10 { grid-column: 4 / 4; grid-row: 4 / 5; } /* Outcome */
+/* Centro y cruz */
+#spread-container.celtic-cross .pos-1  { grid-column: 3 / 4; grid-row: 2 / 3; z-index: 1; } /* central issue */
+#spread-container.celtic-cross .pos-2  { grid-column: 3 / 4; grid-row: 2 / 3; z-index: 4; } /* crossing card (overlay) */
 
-/* Si la carta 2 (challenge) está sobre la 1, la rotamos y la posicionamos con z-index */
+/* Surrounding cross positions */
+#spread-container.celtic-cross .pos-3  { grid-column: 3 / 4; grid-row: 3 / 4; } /* below / foundation */
+#spread-container.celtic-cross .pos-4  { grid-column: 2 / 3; grid-row: 2 / 3; } /* left / past */
+#spread-container.celtic-cross .pos-5  { grid-column: 3 / 4; grid-row: 1 / 2; } /* above / conscious */
+#spread-container.celtic-cross .pos-6  { grid-column: 4 / 5; grid-row: 2 / 3; } /* right / future */
+
+/* Right column stack (7-10) */
+#spread-container.celtic-cross .pos-7  { grid-column: 6 / 7; grid-row: 1 / 2; }
+#spread-container.celtic-cross .pos-8  { grid-column: 6 / 7; grid-row: 2 / 3; }
+#spread-container.celtic-cross .pos-9  { grid-column: 6 / 7; grid-row: 3 / 4; }
+#spread-container.celtic-cross .pos-10 { grid-column: 6 / 7; grid-row: 4 / 5; }
+
+/* Estilo especial para la carta que cruza (pos-2): rotada 90deg y sobrepuesta */
 #spread-container.celtic-cross .pos-2 img {
-  transform: rotate(90deg);
-  width: calc(var(--card-h)); /* usar altura como ancho para rotada */
+  transform: rotate(90deg) translateY(0) scale(1);
+  width: calc(var(--card-h)); /* usar altura como ancho cuando está rotada */
   height: calc(var(--card-w));
-  z-index: 2;
-  margin-top: 0;
+  z-index: 5;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.75);
+  border-radius: 6px;
 }
 
-/* Ajustes responsivos */
+/* Si la carta cruzada está invertida, combinar rotaciones: 90deg + 180deg = 270deg */
+#spread-container.celtic-cross .pos-2 img.reversed {
+  transform: rotate(270deg) translateY(0) scale(1);
+}
+
+/* Asegurar que la clase .reversed en otras posiciones respete la rotación variable */
+#spread-container.celtic-cross .pos-2 img.reversed,
+#spread-container.celtic-cross .pos-2 img {
+  transition: transform 0.35s, box-shadow 0.25s;
+}
+
+/* Etiquetas pequeñas */
+.card .label { font-weight:700; font-size:0.85rem; margin-bottom:6px; }
+
+/* =========================
+   Responsivo: pantallas pequeñas
+   ========================= */
 @media (max-width: 900px) {
-  :root { --card-w: 110px; --card-h: 160px; }
+  :root { --card-w: 110px; --card-h: 160px; --gap: 10px; }
+
+  /* Reorganizar la Cruz Celta en 3 columnas y varias filas para móvil */
   #spread-container.celtic-cross {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(6, auto);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(7, auto);
+    gap: 10px;
   }
-  /* En móvil, apilar la columna derecha debajo de la cruz */
-  #spread-container.celtic-cross .pos-7 { grid-column: 1 / 2; grid-row: 4 / 5; }
-  #spread-container.celtic-cross .pos-8 { grid-column: 2 / 3; grid-row: 4 / 5; }
-  #spread-container.celtic-cross .pos-9 { grid-column: 3 / 4; grid-row: 4 / 5; }
-  #spread-container.celtic-cross .pos-10{ grid-column: 1 / 2; grid-row: 5 / 6; }
+
+  /* Reflow tradicional en móvil: cruz compacta arriba, columna derecha apilada debajo */
+  #spread-container.celtic-cross .pos-5 { grid-column: 2 / 3; grid-row: 1 / 2; } /* above */
+  #spread-container.celtic-cross .pos-4 { grid-column: 1 / 2; grid-row: 2 / 3; } /* past (left) */
+  #spread-container.celtic-cross .pos-1 { grid-column: 2 / 3; grid-row: 2 / 3; } /* center */
+  #spread-container.celtic-cross .pos-2 { grid-column: 2 / 3; grid-row: 2 / 3; } /* cross (overlay) */
+  #spread-container.celtic-cross .pos-6 { grid-column: 3 / 4; grid-row: 2 / 3; } /* future (right) */
+  #spread-container.celtic-cross .pos-3 { grid-column: 2 / 3; grid-row: 3 / 4; } /* below */
+
+  /* Right column becomes stacked below the cross */
+  #spread-container.celtic-cross .pos-7  { grid-column: 1 / 2; grid-row: 4 / 5; }
+  #spread-container.celtic-cross .pos-8  { grid-column: 2 / 3; grid-row: 4 / 5; }
+  #spread-container.celtic-cross .pos-9  { grid-column: 3 / 4; grid-row: 4 / 5; }
+  #spread-container.celtic-cross .pos-10 { grid-column: 2 / 3; grid-row: 5 / 6; }
+
+  /* Ajustar tamaño de la carta cruzada en móvil */
+  #spread-container.celtic-cross .pos-2 img,
+  #spread-container.celtic-cross .pos-2 img.reversed {
+    width: calc(var(--card-h));
+    height: calc(var(--card-w));
+  }
 }
 
-/* Pequeños detalles visuales */
-#spread-container .card .meaning {
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.85);
-  max-width: var(--card-w);
-  text-align: center;
-}
+/* =========================
+   Pequeños detalles visuales
+   ========================= */
+#spread-container { transition: all 0.2s ease; }
+.card .meaning { font-size: 0.85rem; color: rgba(255,255,255,0.9); max-width: var(--card-w); text-align:center; }
 
-/* Fallback cuando no hay imagen */
-.card img[alt="Card"][src=""] {
-  background: linear-gradient(180deg,#222,#111);
-  display:block;
-}
+/* Fin de archivo */
