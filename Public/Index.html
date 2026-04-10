@@ -1,26 +1,69 @@
 <!DOCTYPE html>
-<link rel="manifest" href="./Manifest.json">
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Thoth Temple Tarot</title>
+  <link rel="manifest" href="./Manifest.json" />
+  <style>
+    /* Estilos mínimos para que los botones se vean bien */
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: linear-gradient(180deg,#070707 0%, #0d0d0d 100%);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 24px;
+      text-align: center;
+    }
+    main { max-width: 720px; width: 100%; }
+    h1 { margin-bottom: 20px; }
+    .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    button {
+      padding: 10px 18px;
+      background: #d4af37;
+      color: #111;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 700;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    }
+    button:focus { outline: 3px solid rgba(212,175,55,0.25); }
+  </style>
 </head>
 <body>
+  <main>
+    <h1>Thoth Temple - Tarot</h1>
 
-  <h1>Thoth Temple - Tarot</h1>
-
-  <button onclick="goToDraw()">Draw Cards</button>
-  <button onclick="goToSpreads()">Use Tarot Spread</button>
+    <div class="actions" role="navigation" aria-label="Navegación principal">
+      <button id="btn-draw" type="button">Draw Cards</button>
+      <button id="btn-spreads" type="button">Use Tarot Spread</button>
+    </div>
+  </main>
 
   <script>
-    function goToDraw() {
-      window.location.href = "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Pages/DrawCards/DrawCards.html";
-    }
+    // Rutas relativas a GitHub Pages (ajusta si cambias la estructura)
+    const BASE = "https://aiquimista-agil.github.io/Thoth-Temple-Tarot";
+    const DRAW_PAGE = BASE + "/Src/Pages/DrawCards/DrawCards.html";
+    const SPREADS_PAGE = BASE + "/Src/Pages/Spreads/Spreads.html";
 
-    function goToSpreads() {
-      window.location.href = "https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Pages/Spreads/Spreads.html";
-    }
+    // Navegación: usar event listeners en lugar de onclick inline
+    document.addEventListener("DOMContentLoaded", () => {
+      const btnDraw = document.getElementById("btn-draw");
+      const btnSpreads = document.getElementById("btn-spreads");
+
+      btnDraw.addEventListener("click", () => {
+        window.location.href = DRAW_PAGE;
+      });
+
+      btnSpreads.addEventListener("click", () => {
+        window.location.href = SPREADS_PAGE;
+      });
+    });
   </script>
-
 </body>
 </html>
