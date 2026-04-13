@@ -1,129 +1,147 @@
-/* DrawCards.css
-   Estilo unificado con Spreads.css: variables, tarjetas, inversión y responsivo.
-*/
-
-/* Variables y reset */
-:root{
-  --bg: #0b0b0b;
-  --fg: #ffffff;
-  --accent: #d4af37;
-  --card-w: 140px;
-  --card-h: 200px;
-  --gap: 16px;
-  --max-width: 1100px;
-}
-
-* { box-sizing: border-box; }
-html, body { height: 100%; margin: 0; padding: 0; }
-body {
-  font-family: Georgia, "Times New Roman", serif;
-  background: linear-gradient(180deg,#070707 0%, #0d0d0d 100%);
-  color: var(--fg);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  padding: 24px;
-}
-
-/* Formularios y controles */
-.input-group { margin: 12px 0; }
-label { display:block; margin-bottom:6px; font-weight:600; color:var(--fg); }
-input[type="text"], input[type="number"], select {
-  padding: 8px 10px;
-  border-radius: 6px;
-  border: 1px solid rgba(255,255,255,0.08);
-  background: rgba(255,255,255,0.02);
-  color: var(--fg);
-  width: 260px;
-  max-width: 90%;
-}
-
-/* Botones */
-button {
-  padding: 10px 20px;
-  background: var(--accent);
-  color: #111;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  margin-top: 12px;
-  font-weight: 700;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-}
-button:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
-
-/* Contenedor de cartas */
+/* CONTENEDOR PRINCIPAL */
 #cards-container {
-  margin-top: 28px;
-  padding: 18px;
-  max-width: var(--max-width);
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  gap: var(--gap);
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-/* Componente tarjeta */
-.card {
-  width: var(--card-w);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  color: var(--fg);
-}
-.card .label { font-weight:700; font-size:0.9rem; color:var(--fg); }
-.card .title { font-size:0.95rem; color:var(--fg); }
-
-/* Imagen de carta: usa variable --rot para preservar hover + inversión */
-.card img {
-  width: var(--card-w);
-  height: var(--card-h);
-  object-fit: cover;
-  border-radius: 8px;
-  transform-origin: 50% 50%;
-  transition: transform 0.35s cubic-bezier(.2,.9,.2,1), box-shadow 0.25s;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.6);
-  background: linear-gradient(180deg,#fff 0%, #eee 100%);
-  border: 1px solid rgba(255,255,255,0.06);
-  --rot: 0deg;
-  transform: rotate(var(--rot)) translateY(0) scale(1);
-}
-
-/* Carta invertida: ajustar variable de rotación */
-.card img.reversed { --rot: 180deg; filter: saturate(0.95) brightness(0.98); }
-
-/* Hover: solo translate/scale para preservar rotación */
-.card img:hover {
-  transform: rotate(var(--rot)) translateY(-8px) scale(1.03);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.75);
-}
-
-/* Metadatos dentro de la tarjeta */
-.card .meta { font-size: 0.85rem; color: rgba(255,255,255,0.9); text-align: center; max-width: var(--card-w); }
-
-/* Fallback si no hay imagen */
-.card img[alt="Card"][src=""] {
-  background: linear-gradient(180deg,#222,#111);
-  display:block;
-}
-
-/* Ajustes responsivos */
-@media (max-width: 900px) {
-  :root { --card-w: 110px; --card-h: 160px; --gap: 10px; }
-  #cards-container { gap: 12px; padding: 12px; }
-  .card { width: var(--card-w); }
-}
-
-/* Opcional: estilo para contenedor cuando se muestran muchas cartas (inspección) */
-#cards-container.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(var(--card-w), 1fr));
-  gap: var(--gap);
-  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
 }
 
-/* Fin de archivo */
+/* CARTA */
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 2 / 3;
+  perspective: 1000px;
+}
+
+/* EFECTO FUEGO DETRÁS */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  z-index: -1;
+  border-radius: 12px;
+
+  background: radial-gradient(circle, rgba(255,140,0,0.7), rgba(255,69,0,0.3), transparent);
+  filter: blur(15px);
+
+  animation: firePulse 2s infinite alternate;
+}
+
+/* ANIMACIÓN DE FUEGO */
+@keyframes firePulse {
+  from {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  to {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+/* CONTENEDOR INTERNO (FLIP) */
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  border-radius: 12px;
+  border: none;
+  box-shadow: none;
+
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* CARTA INVERTIDA */
+.card img.reversed {
+  transform: rotate(180deg);
+}
+
+/* ANIMACIÓN DE REVELADO */
+.card.revealing img {
+  animation: revealCard 3s ease forwards;
+}
+
+/* REVEAL DESDE REVERSO */
+@keyframes revealCard {
+  0% {
+    transform: rotateY(180deg) scale(0.8);
+    filter: brightness(0);
+  }
+  50% {
+    transform: rotateY(90deg) scale(0.9);
+    filter: brightness(0.5);
+  }
+  100% {
+    transform: rotateY(0deg) scale(1);
+    filter: brightness(1);
+  }
+}
+
+/* REVERSO INICIAL (ANTES DE REVELAR) */
+.card.revealing img {
+  content: url("https://aiquimista-agil.github.io/Thoth-Temple-Tarot/Src/Assets/Images/Backs/0-Reverse.png");
+}
+
+/* TEXTO */
+.title {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0.5rem;
+  color: #fff;
+}
+
+.label {
+  font-size: 0.85rem;
+  text-align: center;
+  color: #ffae42;
+}
+
+/* METADATA */
+.meta {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #ddd;
+  text-align: center;
+}
+
+/* OCULTAR INFO INICIAL */
+.hidden-info {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* APARICIÓN LENTA */
+.card.revealing .hidden-info {
+  animation: fadeInInfo 2s ease forwards;
+  animation-delay: 2.5s;
+}
+
+@keyframes fadeInInfo {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE FINO */
+@media (max-width: 768px) {
+  #cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  #cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+}
