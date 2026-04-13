@@ -34,49 +34,32 @@ function resolveImageUrl(imagePath) {
 /**
  * Crea y devuelve un elemento DOM .card para la carta dada.
  * Usa createElement en lugar de innerHTML para evitar sobrescrituras y facilitar manipulación.
- *
- * index: número opcional para escalonar la animación (stagger)
  */
-function createCardElement(card, index = 0) {
+function createCardElement(card) {
   const wrapper = document.createElement("div");
   wrapper.className = "card";
-  // variable CSS para delay en la animación (usada por el CSS)
-  wrapper.style.setProperty("--reveal-delay", `${index * 0.18}s`);
 
-  // Label (posición en el spread, si aplica)
+  // Si el renderizador principal necesita clases de posición, Spreads.js las añade.
+  // Aquí solo construimos el contenido visual.
   const label = document.createElement("p");
   label.className = "label";
   label.textContent = card.position || "";
 
-  // Title: añade "(Inverted)" si la carta viene invertida
   const title = document.createElement("p");
   title.className = "title";
-  const invertedSuffix = card.orientation === "reversed" ? " (Inverted)" : "";
-  title.textContent = `${card.name || "Unknown"}${invertedSuffix}`;
+  title.textContent = card.name || "Unknown";
 
-  // Contenedor que animará el "reveal"
-  const revealSurface = document.createElement("div");
-  revealSurface.className = "reveal-surface";
-
-  // Back (mostramos el reverso inicialmente; se reemplaza por la cara frontal al terminar la animación)
-  const backDiv = document.createElement("div");
-  backDiv.className = "back";
-  // Si quieres personalizar el reverso por carta, podrías usar card.backImage aquí.
-
-  // Preparamos la imagen frontal (pero no la añadimos todavía)
   const img = document.createElement("img");
   img.alt = card.name || "Card";
   img.loading = "lazy";
   img.src = resolveImageUrl(card.image || "");
-  // Si la carta está invertida, rotamos la imagen 180deg (CSS .reversed)
   if (card.orientation === "reversed") {
     img.classList.add("reversed");
   }
 
-  // Metadatos opcionales (ocultos hasta reveal)
+  // Metadatos opcionales
   const meta = document.createElement("div");
   meta.className = "meta";
-  meta.setAttribute("aria-hidden", "true"); // accesibilidad: oculto hasta revelado
   if (card.keywords) {
     const kw = Array.isArray(card.keywords) ? card.keywords.join(", ") : card.keywords;
     const p = document.createElement("p");
@@ -94,36 +77,10 @@ function createCardElement(card, index = 0) {
     meta.appendChild(p);
   }
 
-  // Construcción: añadimos el reverso dentro del revealSurface para que se vea primero
-  revealSurface.appendChild(backDiv);
-
-  // Append a wrapper (orden visual: label, revealSurface, title, meta)
   wrapper.appendChild(label);
-  wrapper.appendChild(revealSurface);
+  wrapper.appendChild(img);
   wrapper.appendChild(title);
   if (meta.children.length) wrapper.appendChild(meta);
-
-  /**
-   * Cuando termine la animación de revealSurface:
-   * - Reemplazamos el reverso por la imagen frontal (si existe)
-   * - Añadimos la clase .revealed al wrapper para que la .meta aparezca
-   */
-  revealSurface.addEventListener("animationend", () => {
-    // Reemplazo del reverso por la imagen frontal
-    // Si la imagen ya está cargada o la URL está vacía, hacemos el swap de todas formas.
-    // Mantenemos la transición visual suave.
-    revealSurface.innerHTML = ""; // limpiar el reverso
-    revealSurface.appendChild(img);
-
-    // Forzar reflow para asegurar que cualquier transición CSS se aplique correctamente
-    // (no siempre necesario, pero ayuda en algunos navegadores)
-    // eslint-disable-next-line no-unused-expressions
-    img.offsetHeight;
-
-    // Mostrar metadatos
-    wrapper.classList.add("revealed");
-    meta.removeAttribute("aria-hidden");
-  }, { once: true });
 
   return wrapper;
 }
@@ -156,8 +113,8 @@ async function drawCards() {
     if (!Array.isArray(drawn)) throw new Error("TarotEngine.drawCards no devolvió un array");
 
     container.innerHTML = "";
-    drawn.forEach((card, i) => {
-      const el = createCardElement(card, i);
+    drawn.forEach((card) => {
+      const el = createCardElement(card);
       container.appendChild(el);
     });
   } catch (err) {
@@ -182,8 +139,8 @@ async function renderAllCards() {
   try {
     const cards = await TarotEngine.loadCards();
     container.innerHTML = "";
-    cards.forEach((card, i) => {
-      const el = createCardElement(card, i);
+    cards.forEach((card) => {
+      const el = createCardElement(card);
       container.appendChild(el);
     });
   } catch (err) {
